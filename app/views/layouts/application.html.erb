@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>City of Los Angeles Salary Database</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="container">
+  <h1><%= link_to "City of Los Angeles Salary Database", root_path, style: "color: #000000" %></h1>
+
+  <p>
+    Explore the salaries of City of Los Angeles employees with this interactive tool. 
+    Salary information released August 6, 2010 by Los Angeles City Controller Wendy Greuel. 
+    Some abbreviations and department names have been simplified from the original data for ease of browsing. 
+    <a href="http://controller.lacity.org/stellent/groups/electedofficials/@ctr_contributor/documents/contributor_web_content/lacityp_011220.pdf">Download the original PDF</a>.
+  </p>
+
+  <p>
+    <strong>Note:</strong> 
+    Payroll for the Department of Water &amp; Power is administered separately and was not included in the data released by the city. 
+    A separate request has been filed for DWP salary information.
+  </p>
+  
+  <hr />
+  
+  <h4>Explore the database</h4>
+  <%= form_tag list_path, class: "form-search" do %>
+    <%= label_tag "Search by job title:" %>
+    <%= text_field_tag 'query', params[:query], class: "input-medium search-query"%>
+    <%= submit_tag "Search", class: "btn" %>
+  <% end %>
+  
+  <a href="<%= list_path %>">&raquo; Browse all salaries</a><br />
+  <hr />
+  
+  <%= yield %>
+</div>
+
+<hr />
+<div class="container" style="text-align: center; color: #cccccc; font-size: small; margin-bottom: 20px;">
+  <a href="http://kpcc.org/terms/">Terms &amp; Conditions</a> / 
+  <a href="http://kpcc.org/privacy/">Privacy</a> / 
+  <a href="http://kpcc.org/web_site_feedback">Website Feedback</a><br />
+  Copyright 2001 &copy; <a href="http://kpcc.org">Southern California Public Radio</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,3 @@
+== Salaries Project
+
+Originally hosted at http://kpcc.org/specials/salaries.

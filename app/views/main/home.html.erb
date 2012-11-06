@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="span6">
+    <div class="salary-box">
+      <h3>25 Highest Salaries</h3>
+      <ul class="lst">
+        <% @top_jobs.each_with_index do |job, i| %>
+          <li><strong><em><%= number_to_currency(job.salary) %></em>#<%=i%>: <%= job.job_title %></strong></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="span6">
+
+    <div class="salary-box">
+      <h3>Total Salary by Department</h3>
+      <ul class="lst">
+        <li>
+          <a href="<%= list_path %>"><em><%= number_to_currency(Employee::TOTAL_SUM) %></em>All Departments</a> 
+          <span style="width: 460px;">x</span>
+        </li>
+      
+        <% @departments.each do |department| %>
+          <li>
+            <a href="<%= department_path(slug: department.slug) %>"><em><%= number_to_currency(department.dept_total)%></em><%= department.name %></a> 
+            <span style="width: <%= department.dept_total / Employee::TOTAL_SUM * 460 %>px;">x</span>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>

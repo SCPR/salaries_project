@@ -1,0 +1,40 @@
+@import "bootstrap";
+
+ul.lst li {
+    margin: 0 0 2px 0;
+    position: relative;    
+    list-style-position:inside;
+}
+ul.lst li{
+    list-style:none;
+}
+ul.lst li a, ul.lst li strong{
+    position: relative;
+    display: block;
+    padding: 7px;
+    z-index: 2;
+    font-weight:normal;
+    }
+ul.lst li em{
+    float: right;
+    margin: 0 0 0 5px;
+    font-style: normal;
+    font-weight: normal;
+    color: #9c836e;
+    }
+ul.lst li span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    height: 100%;
+    line-height: 2.55em;
+    text-indent: -9999px;
+    background: #f3f2e8;
+    } 
+ul.lst li:hover span {
+    background: #ecebe1;
+    }
+ul.lst li:hover{
+    background: #dddddd;
+}
