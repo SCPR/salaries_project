@@ -4,7 +4,7 @@
       <h3>25 Highest Salaries</h3>
       <ul class="lst">
         <% @top_jobs.each_with_index do |job, i| %>
-          <li><strong><em><%= number_to_currency(job.salary) %></em>#<%=i%>: <%= job.job_title %></strong></li>
+          <li><strong><em><%= number_to_currency(job.salary) %></em>#<%=i+1%>: <%= job.job_title %></strong></li>
         <% end %>
       </ul>
     </div>
