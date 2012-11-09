@@ -37,7 +37,7 @@
   
   <hr />
   <h4>Explore the database</h4>
-  <%= form_tag list_path, class: "form-search" do %>
+  <%= form_tag list_path, method: :get, class: "form-search" do %>
     <%= label_tag "Search by job title:" %>
     <%= text_field_tag 'query', params[:query], class: "input-medium search-query"%>
     <%= submit_tag "Search", class: "btn" %>
