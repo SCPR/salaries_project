@@ -2,7 +2,7 @@
 
 Originally hosted at <http://kpcc.org/specials/salaries>.
 
-### Dependancies
+### Dependencies
 * Rails 3.2.8
 * SQLite
 * Kaminari for pagination
