@@ -10,7 +10,9 @@ Originally hosted at <http://kpcc.org/specials/salaries>.
 ### Deployment
 
 media:
+
     cap deploy
 
 dev2:
+
     cap staging deploy
