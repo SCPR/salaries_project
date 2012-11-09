@@ -1,3 +1,15 @@
 == Salaries Project
 
 Originally hosted at http://kpcc.org/specials/salaries.
+
+Rails 3.8, sqlite3
+
+=== Deployment
+
+media:
+
+`cap deploy`
+
+dev2:
+
+`cap staging deploy`
