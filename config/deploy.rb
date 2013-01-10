@@ -14,7 +14,7 @@ set :group_writable, false
 # --------------
 # Variables
 set :branch, "master"
-set :rails_env, :production
+set :rails_env, "production"
 
 # --------------
 # Roles
