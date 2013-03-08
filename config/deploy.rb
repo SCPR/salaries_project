@@ -30,6 +30,7 @@ task :staging do
   role :web, scprdev
 end
 
+before "deploy:symlink", "deploy:symlink_config"
 after "deploy:restart", "deploy:cleanup"
 
 namespace :deploy do
@@ -38,5 +39,11 @@ namespace :deploy do
   task :migrate do end
   task :restart, :roles => :app, :except => { :no_release => true } do
     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
+  end
+
+  task :symlink_config do
+    %w{ app_config.yml }.each do |file|
+      run "ln -nfs #{shared_path}/config/#{file} #{release_path}/config/#{file}"
+    end
   end
 end
