@@ -9,7 +9,7 @@
       </ul>
     </div>
   </div>
-  
+
   <div class="span6">
 
     <div class="salary-box">
@@ -19,7 +19,7 @@
           <a href="<%= list_path %>"><em><%= number_to_currency(Employee::TOTAL_SUM) %></em>All Departments</a> 
           <span style="width: 460px;">x</span>
         </li>
-      
+
         <% @departments.each do |department| %>
           <li>
             <a href="<%= department_path(slug: department.slug) %>"><em><%= number_to_currency(department.dept_total)%></em><%= department.name %></a> 

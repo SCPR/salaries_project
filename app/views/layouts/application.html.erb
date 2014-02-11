@@ -4,7 +4,7 @@
   <title>City of Los Angeles Salary Database</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= csrf_meta_tags %>
-  
+
   <link rel="shortcut icon" href="http://media.scpr.org/favicon.ico" />
   <link rel="apple-touch-icon-precomposed" href="http://media.scpr.org/apple-touch-icon.png" />
 </head>
@@ -18,7 +18,7 @@
     </div>
   </div>
 </header>
-  
+
 <div class="container">
   <h1><%= link_to "City of Los Angeles Salary Database", root_path, style: "color: #000000" %></h1>
 
@@ -34,7 +34,7 @@
     Payroll for the Department of Water &amp; Power is administered separately and was not included in the data released by the city. 
     A separate request has been filed for DWP salary information.
   </p>
-  
+
   <hr />
   <h4>Explore the database</h4>
   <%= form_tag list_path, method: :get, class: "form-search" do %>
@@ -42,10 +42,10 @@
     <%= text_field_tag 'query', params[:query], class: "input-medium search-query"%>
     <%= submit_tag "Search", class: "btn" %>
   <% end %>
-  
+
   <a href="<%= list_path %>">&raquo; Browse all salaries</a><br />
   <hr />
-  
+
   <%= yield %>
 </div>
 

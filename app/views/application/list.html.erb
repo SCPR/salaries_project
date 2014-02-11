@@ -16,11 +16,11 @@
     <th style="width:40%">Department</th>
     <th style="width:20%">Salary</th>
   </tr>
-  
+
   <% if @employees.blank? %>
     <tr class="odd"><td colspan="3" style="text-align:center;">No results for this search.</td></tr>
   <% end %>
-  
+
   <% @employees.each do |employee|%>
     <tr>
       <td><%= employee.job_title %></td>
