@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '~> 3.2.8'
 gem 'sqlite3'
 gem 'jquery-rails'
-gem 'capistrano'
+gem 'capistrano', '~> 2.15.5'
 
 gem 'kaminari'
 
